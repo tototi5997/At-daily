@@ -26,4 +26,3 @@ type Pick<T, R extends keyof T> = {
   [key in R]: T[key];
 };
 ```
-dynamic programming
