@@ -1,4 +1,4 @@
-[实现 Pick<T, R>](https://github.com/type-challenges/type-challenges/blob/main/questions/00004-easy-pick/README.zh-CN.md)
+[实现 Pick](https://github.com/type-challenges/type-challenges/blob/main/questions/00004-easy-pick/README.zh-CN.md)
 
 从类型 `T` 中选出符合 `K` 的属性，构造一个新的类型
 
