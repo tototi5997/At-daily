@@ -23,6 +23,8 @@ type Res1 = Unique<[1, 2, 3, 4, 4, 5, 6, 7]>; // [1, 2, 3, 4, 5, 6, 7]
 type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y ? 1 : 2 ? true : false;
 ```
 
+PS:为了区分 unknow, any 和 never 类型，通常我们用 Equal 来区分，如果单纯使用双向 extends,通常 any 和 unkow 是无法区分的
+
 在实现一个类型 Includes 判断元素是否在元组中
 
 ```ts
