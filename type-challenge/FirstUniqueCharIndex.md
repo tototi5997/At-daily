@@ -42,3 +42,13 @@ type FirstUniqueCharIndex<T extends string, U extends any[] = []> = T extends `$
     : U["length"]
   : -1;
 ```
+
+```ts
+type FirstUniqueCharIndex<T extends string, U extends any[] = []> = T extends `${infer L}${infer R}`
+  ? R extends `${string}${L}${string}`
+    ? FirstUniqueCharIndex<R, [...U, L]>
+    : L extends U[number]
+    ? FirstUniqueCharIndex<R, [...U, L]>
+    : U["length"]
+  : -1;
+```
